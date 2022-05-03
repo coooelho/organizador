@@ -10,13 +10,23 @@ DATA: 03/05/2022
 
 import os
 
-pasta = '/home/luis/ufrgs/pasta'
+#pasta = '/home/luis/ufrgs/pasta'
+pasta = '.'
 arquivo = os.scandir(pasta)
 
-for arquivo in arquivo:
-    print(arquivo.name)
+#for arquivo in arquivo:
+#   print(arquivo.name)
 
 
 #Agora que vimos que os arquivos estão na pasta, vamos criar as pastas para organiza-los
-os.mkdir('documentos')
-os.mkdir('planilhas')
+if os.path.exists('.'):
+    print('Pasta já existe')
+else:
+    os.mkdir('documentos')
+
+
+if os.path.exists('.'):
+    print('Pasta já existe')
+else:
+    os.mkdir('planilhas')
+

@@ -30,3 +30,9 @@ if os.path.exists('.'):
 else:
     os.mkdir('planilhas')
 
+
+#Enviando os arquivos para as pastas
+if arquivo == '.doc':
+    shutil.move(arquivo, './documentos')
+elif arquivo == 'xls':
+    shutil.move(arquivo, './planilhas')
